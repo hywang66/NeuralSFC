@@ -5,7 +5,7 @@ Official Pytorch implementation of the ECCV 2022 paper.
 
 Top: Neural SFC; Bottom: Hilbert curve.
 
-![Comparision](https://hywang66.github.io/publication/neuralsfc/img_00630_neural_hilbert_vis.gif)
+![Comparision](comparison.gif)
 
 
 

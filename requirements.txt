@@ -1,0 +1,12 @@
+networkx==2.5
+easydict
+matplotlib
+tqdm
+numpy
+hilbertcurve==1.0.3
+Pillow
+python_dateutil
+PyYAML
+scikit_learn
+tensorboard==2.3.0
+protobuf==3.20.*

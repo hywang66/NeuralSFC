@@ -1,0 +1,72 @@
+
+dataset: 'mnist'
+data_dir: '/vulcanscratch/hywang66/sfc/sfc_gen/'
+val_ratio: 0.1 # ratio of the val dataset
+
+gpu: '0'
+n_workers: 4
+benchmark: True
+
+load_path: ''
+ema_decay: 0.
+n_epochs: 100
+batch_size: 64  # total: 782*64
+val_batch_size: 64
+e_iters: 1
+lr_e: !!float 1e-4
+lr_g: !!float 1e-4
+beta1: 0.9
+beta2: 0.999
+lr_decay: 0.99
+checkpoint_epochs: 3
+print_interval: 10
+only_save_best: True
+val_step_interval: -1 # means don't do in-epoach validation
+n_in_epoch_val_steps: 50
+n_select: 16
+
+img_size: 32
+n_channels: 1 # number of channels of input images
+graph_merge: 'concat'
+e_class: 'nac'
+e_loss_type: 'mse'
+g_loss_type: 'direct'
+weight_norm: 'in'
+
+residual: False
+n_encoder_layers_wg: [2, 2, 2, 2]
+n_encoder_layers_we: [2, 2, 2, 2]
+n_embeddings: 512
+n_embeddings_evaluator: 512
+
+ac_offset: 6
+# max_grad_norm: 1.0
+max_grad_norm_e: 100.0
+max_grad_norm_g: 100.0
+scale_ac: False
+
+output_folder: null
+large_wg: False
+
+show_more_acs: False
+show_lzw: True
+scheduler_mode: 'val'
+scheduler: 'exp'
+warmup: 0.2
+info: ''
+only_avg_loss: False
+n_regressor_layers: 6
+
+wd_e: 0.0
+wd_g: 0.0
+
+normalize_e: False
+normalize_lo: 60.0
+normalize_hi: 200.0
+
+
+
+
+
+
+

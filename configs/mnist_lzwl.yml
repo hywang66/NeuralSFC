@@ -1,0 +1,43 @@
+dataset: 'ucmnist'
+data_dir: '.'
+val_ratio: 0.1
+e_class: 'lzwl' # Using LZW encoding length evaluator
+
+gpu: '0,1'
+n_workers: 8
+benchmark: True
+
+g_loss_type: 'direct'
+weight_norm: 'in'
+residual: False
+n_channels: 1
+
+lr_e: !!float 1e-4
+lr_g: !!float 3e-5
+
+max_grad_norm_e: 100000.0
+max_grad_norm_g: 100000.0
+ac_offset: 1
+
+n_select: 16
+batch_size: 8 # total: 782*128
+val_batch_size: 8
+
+output_folder: 'lzwl'
+
+large_wg: false
+
+
+print_interval: 10
+val_step_interval: -1 # no in-epoach validation
+only_save_best: True
+
+show_lzw: True
+show_more_acs: False
+only_avg_loss: False
+
+
+n_epochs: 150
+normalize_e: True
+normalize_lo: 60.0
+n_regressor_layers: 6

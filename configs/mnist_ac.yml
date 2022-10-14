@@ -1,0 +1,24 @@
+dataset: mnist
+data_dir: '.'
+e_class: 'nac' # Using negative autocorrelation evaluator
+n_epochs: 50
+
+gpu: '0,1'
+n_workers: 8
+benchmark: True
+
+n_channels: 1
+
+g_loss_type: 'direct'
+weight_norm: 'in'
+residual: False
+
+lr_e: !!float 1e-4
+lr_g: !!float 2e-5
+
+ac_offset: 6
+
+output_folder: autocorrelation
+
+batch_size: 128
+val_batch_size: 128

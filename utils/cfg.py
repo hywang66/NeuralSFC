@@ -1,0 +1,1 @@
+cfg_global = None
